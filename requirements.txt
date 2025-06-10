@@ -6,6 +6,7 @@ colorama==0.4.6
 cssbeautifier==1.15.4
 dill==0.4.0
 Django==5.2.1
+django-taggit==6.1.0
 EditorConfig==0.17.0
 isort==6.0.1
 jsbeautifier==1.15.4
