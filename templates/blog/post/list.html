@@ -1,4 +1,6 @@
 {% extends 'blog/base.html' %}
+{% load blog_tags %}
+
 {% block title %}
     My blog
 {% endblock %}
@@ -25,7 +27,7 @@
             {% endfor %}
         </p>
         <p class="date">Опубликован {{ post.publish }} от {{ post.author }}</p>
-        {{ post.body|truncatewords:30|linebreaks }}
+        {{ post.body|markdown|truncatewords_html:30 }}
     {% endfor %}
     {% include "paginator.html" with page=posts %}
 {% endblock  %}
