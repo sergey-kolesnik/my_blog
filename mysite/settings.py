@@ -26,7 +26,7 @@ SECRET_KEY = config("SECRET_KEY_DJANGO")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '0.0.0.0']
 
 
 # Application definition
@@ -42,8 +42,10 @@ INSTALLED_APPS = [
     "taggit",
     'django.contrib.sites',
     'django.contrib.sitemaps',
+    #Для добавления __search
+    "django.contrib.postgres",
 ]
-
+#идентификатор текущего сайта
 SITE_ID=1
 
 MIDDLEWARE = [
@@ -78,6 +80,14 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 
 DATABASES = {
     "default": {
