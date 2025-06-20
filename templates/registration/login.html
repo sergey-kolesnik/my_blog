@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+{% block title %}
+    Вход
+{% endblock  %}
+
+{% block content %}
+    <h2>
+        Вход
+    </h2>
+    <form method="post">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <p>
+            <input type="submit" value="Вход">
+        </p>
+    </form>
+{% endblock  %}

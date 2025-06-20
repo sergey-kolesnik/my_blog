@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.sitemaps',
     #Для добавления __search
     "django.contrib.postgres",
+    "accounts.apps.AccountsConfig",
 ]
 #идентификатор текущего сайта
 SITE_ID=1
@@ -150,3 +151,9 @@ EMAIL_USE_TSL = True
 DEFAULT_FROM_EMAIL = config("DEFAULT_FROM_EMAIL")
 EMAIL_TIMEOUT = 10
 EMAIL_USE_SSL = True
+
+
+#Для перенапрвления после успешного входа в систему
+LOGIN_REDIRECT_URL = "/"
+#Для перенапрвления после выхода
+LOGOUT_REDIRECT_URL = "/"
