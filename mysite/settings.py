@@ -156,4 +156,10 @@ EMAIL_USE_SSL = True
 #Для перенапрвления после успешного входа в систему
 LOGIN_REDIRECT_URL = "/"
 #Для перенапрвления после выхода
-LOGOUT_REDIRECT_URL = "/"
+# LOGOUT_REDIRECT_URL = "/"
+LOGIN_URL = '/accounts/login/'
+
+SESSION_COOKIE_AGE = 60 * 60 * 24 * 30
+
+MEDIA_ROOT = BASE_DIR/'media'
+MEDIA_URL = '/media/'
