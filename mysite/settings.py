@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     "django.contrib.postgres",
     "accounts.apps.AccountsConfig",
     "social_django",
+    "django_bootstrap5"
 ]
 #идентификатор текущего сайта
 SITE_ID=1
